@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PASTArtApp: App {
+    let store = AppStore(initialState: .init(), reducer: appReducer)
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(store)
         }
     }
 }
