@@ -6,10 +6,11 @@
 //
 
 import Foundation
-//
-//enum Pasta {
-//    case pomodoro
-//}
+
+enum Pasta: String {
+    case pomodoro
+    case alfredo
+}
 
 struct PastaDetailInfo {
     let name: String

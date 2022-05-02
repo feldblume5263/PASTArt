@@ -9,7 +9,7 @@ import Foundation
 
 typealias CookTimeInterval = TimeInterval
 
-enum CookLevel:  String, CaseIterable {
+enum CookLevel: String, CaseIterable {
     case acerbo
     case aldente
     case bencotto

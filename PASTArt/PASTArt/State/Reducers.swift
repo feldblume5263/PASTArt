@@ -14,12 +14,10 @@ func appReducer(state: inout AppState, action: AppAction) -> Void {
     
     // MARK: - preconfiguration view
     case .amountButtonPressed(let buttonIdx):
-        state.amountButtonState = [Bool](repeating: false, count: state.amountButtonState.count)
-        state.amountButtonState[buttonIdx] = true
+        state.amountButtonState.indices.forEach { state.amountButtonState[$0] = $0 == buttonIdx ? true : false }
     
     case .cookLevelButtonPressed(let buttonIdx):
-        state.cookLevelButtonState = [Bool](repeating: false, count: state.cookLevelButtonState.count)
-        state.cookLevelButtonState[buttonIdx] = true
+        state.cookLevelButtonState.indices.forEach { state.cookLevelButtonState[$0] = $0 == buttonIdx ? true : false }
         
     case .goToCookingStage:
         state.currentStage = .cookingPasta

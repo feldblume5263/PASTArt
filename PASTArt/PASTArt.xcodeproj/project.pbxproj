@@ -12,7 +12,7 @@
 		AB9D6E06281A8E16007D1535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9D6E05281A8E16007D1535 /* Assets.xcassets */; };
 		AB9D6E09281A8E16007D1535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9D6E08281A8E16007D1535 /* Preview Assets.xcassets */; };
 		AB9D6E10281A90DD007D1535 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E0F281A90DD007D1535 /* Recipes.swift */; };
-		AB9D6E12281AB6B7007D1535 /* Pasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E11281AB6B7007D1535 /* Pasta.swift */; };
+		AB9D6E12281AB6B7007D1535 /* PastaDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */; };
 		AB9D6E17281CF8A7007D1535 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E16281CF8A7007D1535 /* AppState.swift */; };
 		AB9D6E19281CF8D9007D1535 /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E18281CF8D9007D1535 /* AppActions.swift */; };
 		AB9D6E1B281CF902007D1535 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E1A281CF902007D1535 /* Reducers.swift */; };
@@ -31,7 +31,7 @@
 		AB9D6E05281A8E16007D1535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB9D6E08281A8E16007D1535 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB9D6E0F281A90DD007D1535 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
-		AB9D6E11281AB6B7007D1535 /* Pasta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pasta.swift; sourceTree = "<group>"; };
+		AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaDetailInfo.swift; sourceTree = "<group>"; };
 		AB9D6E16281CF8A7007D1535 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		AB9D6E18281CF8D9007D1535 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
 		AB9D6E1A281CF902007D1535 /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		AB9D6E13281BC71D007D1535 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB9D6E11281AB6B7007D1535 /* Pasta.swift */,
+				AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */,
 				AB9D6E0F281A90DD007D1535 /* Recipes.swift */,
 			);
 			path = Model;
@@ -223,7 +223,7 @@
 				AB9D6E27281E5996007D1535 /* CookLevelConfigButtonsView.swift in Sources */,
 				AB9D6E02281A8E14007D1535 /* PASTArtApp.swift in Sources */,
 				AB9D6E10281A90DD007D1535 /* Recipes.swift in Sources */,
-				AB9D6E12281AB6B7007D1535 /* Pasta.swift in Sources */,
+				AB9D6E12281AB6B7007D1535 /* PastaDetailInfo.swift in Sources */,
 				AB9D6E1F281CFB76007D1535 /* ContentView.swift in Sources */,
 				AB9D6E19281CF8D9007D1535 /* AppActions.swift in Sources */,
 				ABB15A9E281EA26A00A7AB3F /* CookingGuideView.swift in Sources */,

@@ -16,6 +16,7 @@ enum AppStage {
 
 
 struct AppState {
+    // MARK: - App Stage
     var currentStage: AppStage = .settingConfig
     
     
