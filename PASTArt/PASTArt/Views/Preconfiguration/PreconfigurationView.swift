@@ -27,11 +27,11 @@ struct PreconfigurationView: View {
     }
 }
 
-struct PreconfigurationView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        let store = AppStore(initialState: .init(), reducer: appReducer)
-        PreconfigurationView()
-            .environmentObject(store)
-    }
-}
+//struct PreconfigurationView_Previews: PreviewProvider {
+//    
+//    static var previews: some View {
+//        let store = AppStore(initialState: .init(), reducer: appReducer)
+//        PreconfigurationView()
+//            .environmentObject(store)
+//    }
+//}

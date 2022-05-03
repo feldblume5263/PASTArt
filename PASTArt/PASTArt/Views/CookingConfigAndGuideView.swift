@@ -9,14 +9,17 @@ import SwiftUI
 
 struct CookingConfigAndGuideView: View {
     @EnvironmentObject var store: AppStore
+    // 파스타 타입을 시작 버튼을 누를 때 받아와야 함
+    var typeOfPasta: Pasta = .pomodoro
     
     var body: some View {
         Group {
-            if store.state.currentStage == .settingConfig {
+            switch store.state.currentStage {
+            case .settingConfig:
                 PreconfigurationView()
                     .environmentObject(store)
-            } else {
-                CookingGuideView()
+            default:
+                CookingGuideView(typeOfPasta: typeOfPasta)
             }
         }
     }
@@ -25,7 +28,7 @@ struct CookingConfigAndGuideView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let store = AppStore(initialState: .init(), reducer: appReducer)
-        CookingConfigAndGuideView()
+        CookingConfigAndGuideView(typeOfPasta: .pomodoro)
             .environmentObject(store)
     }
 }

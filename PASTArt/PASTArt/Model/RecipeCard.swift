@@ -1,5 +1,5 @@
 //
-//  Recipes.swift
+//  RecipeCard.swift
 //  PASTArt
 //
 //  Created by Noah Park on 2022/04/28.
@@ -8,6 +8,27 @@
 import Foundation
 
 typealias CookTimeInterval = TimeInterval
+
+struct RecipeCard: Identifiable {
+    let id: Int
+    let stepName: String
+    let description: String
+    var duration: TimeInterval?
+    let videoName: String?
+    let isNoodle: Bool
+    
+    
+    static func getRecipesOfPasta(pasta: Pasta) -> [RecipeCard] {
+        switch pasta {
+        case .pomodoro:
+            return pomodoroRecipes
+        case .alfredo:
+            return pomodoroRecipes
+        case .alioOilo:
+            return pomodoroRecipes
+        }
+    }
+}
 
 enum CookLevel: String, CaseIterable {
     case acerbo
@@ -44,16 +65,4 @@ enum Noodle: String, CaseIterable {
         }
         
     }
-}
-
-struct Recipes {
-    let NoodleRecipe: RecipeCard
-    let AfterNoodleRecipe: [RecipeCard]
-}
-
-struct RecipeCard {
-    let stepName: String
-    let description: String
-    var duration: [TimeInterval]?
-    let videoName: String?
 }
