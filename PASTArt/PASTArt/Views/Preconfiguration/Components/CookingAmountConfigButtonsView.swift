@@ -16,7 +16,7 @@ struct CookingAmountConfigButtonsView: View {
             HStack {
                 Text("몇 인분을 요리하실 건가요?").foregroundColor(.gray)
                 Spacer()
-            }
+            }.padding(.bottom)
             HStack {
                 ForEach(0 ..< store.state.amountButtonState.count, id: \.self) { buttonIdx in
                     let isPressed: Bool = store.state.amountButtonState[buttonIdx]
@@ -30,8 +30,7 @@ struct CookingAmountConfigButtonsView: View {
                         }
                     }
                     .aspectRatio(CGSize(width: 1.6, height: 1), contentMode: .fit)
-                    .frame(width: geometry.size.width * 0.15)
-                    
+                    .frame(width: geometry.size.width * 0.15) 
                 }
                 Spacer()
             }

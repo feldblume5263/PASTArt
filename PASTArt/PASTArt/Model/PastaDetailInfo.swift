@@ -10,6 +10,7 @@ import Foundation
 enum Pasta: String {
     case pomodoro
     case alfredo
+    case alioOilo
 }
 
 struct PastaDetailInfo {

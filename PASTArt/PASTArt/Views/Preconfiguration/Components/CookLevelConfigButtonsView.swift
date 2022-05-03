@@ -17,7 +17,7 @@ struct CookLevelConfigButtonsView: View {
             HStack {
                 Text("원하시는 면 익힘 정도를 골라주세요").foregroundColor(.gray)
                 Spacer()
-            }
+            }.padding(.bottom)
             HStack {
                 ForEach(0 ..< store.state.cookLevelButtonState.count, id: \.self) { buttonIdx in
                     let isPressed: Bool = store.state.cookLevelButtonState[buttonIdx]

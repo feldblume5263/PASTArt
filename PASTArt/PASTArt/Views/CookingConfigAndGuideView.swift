@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CookingConfigAndGuideView: View {
     @EnvironmentObject var store: AppStore
     
     var body: some View {
@@ -25,7 +25,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let store = AppStore(initialState: .init(), reducer: appReducer)
-        ContentView()
+        CookingConfigAndGuideView()
             .environmentObject(store)
     }
 }

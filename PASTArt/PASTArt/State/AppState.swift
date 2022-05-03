@@ -7,6 +7,17 @@
 
 import Foundation
 
+struct AppState {
+    // MARK: - App Stage
+    var currentStage: AppStage = .settingConfig
+    
+    // MARK: - preconfiguration view
+    var config = PastaCookingConfig()
+    var amountButtonState: [Bool] = [true, false, false, false]
+    var cookLevelButtonState: [Bool] = [false, true, false]
+    var selectedNoodle = Int(Noodle.allCases.count / 2)
+}
+
 enum AppStage {
     case showingMenus
     case showingDetail
@@ -14,13 +25,8 @@ enum AppStage {
     case cookingPasta
 }
 
-
-struct AppState {
-    // MARK: - App Stage
-    var currentStage: AppStage = .settingConfig
-    
-    
-    // MARK: - preconfiguration view
-    var amountButtonState: [Bool] = [true, false, false, false]
-    var cookLevelButtonState: [Bool] = [false, true, false]
+struct PastaCookingConfig {
+    var numberOfPeople: Int?
+    var typeOfNoodle: Noodle?
+    var cookingLevel: CookLevel?
 }

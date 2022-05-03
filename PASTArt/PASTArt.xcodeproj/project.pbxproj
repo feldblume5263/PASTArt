@@ -17,11 +17,14 @@
 		AB9D6E19281CF8D9007D1535 /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E18281CF8D9007D1535 /* AppActions.swift */; };
 		AB9D6E1B281CF902007D1535 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E1A281CF902007D1535 /* Reducers.swift */; };
 		AB9D6E1D281CF988007D1535 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E1C281CF988007D1535 /* AppStore.swift */; };
-		AB9D6E1F281CFB76007D1535 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E1E281CFB76007D1535 /* ContentView.swift */; };
+		AB9D6E1F281CFB76007D1535 /* CookingConfigAndGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E1E281CFB76007D1535 /* CookingConfigAndGuideView.swift */; };
 		AB9D6E23281E5887007D1535 /* CookingAmountConfigButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E22281E5887007D1535 /* CookingAmountConfigButtonsView.swift */; };
 		AB9D6E25281E5941007D1535 /* CookingNoodleConfigPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E24281E5941007D1535 /* CookingNoodleConfigPickerView.swift */; };
 		AB9D6E27281E5996007D1535 /* CookLevelConfigButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E26281E5996007D1535 /* CookLevelConfigButtonsView.swift */; };
 		ABB15A9E281EA26A00A7AB3F /* CookingGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15A9D281EA26A00A7AB3F /* CookingGuideView.swift */; };
+		ABB15AA2281F62BA00A7AB3F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AA1281F62BA00A7AB3F /* Colors.swift */; };
+		ABB15AA4281FAEBF00A7AB3F /* StartCookingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AA3281FAEBF00A7AB3F /* StartCookingButton.swift */; };
+		ABB15AA6281FBE8100A7AB3F /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AA5281FBE8100A7AB3F /* Enum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,11 +39,14 @@
 		AB9D6E18281CF8D9007D1535 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
 		AB9D6E1A281CF902007D1535 /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
 		AB9D6E1C281CF988007D1535 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
-		AB9D6E1E281CFB76007D1535 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB9D6E1E281CFB76007D1535 /* CookingConfigAndGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingConfigAndGuideView.swift; sourceTree = "<group>"; };
 		AB9D6E22281E5887007D1535 /* CookingAmountConfigButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingAmountConfigButtonsView.swift; sourceTree = "<group>"; };
 		AB9D6E24281E5941007D1535 /* CookingNoodleConfigPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingNoodleConfigPickerView.swift; sourceTree = "<group>"; };
 		AB9D6E26281E5996007D1535 /* CookLevelConfigButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookLevelConfigButtonsView.swift; sourceTree = "<group>"; };
 		ABB15A9D281EA26A00A7AB3F /* CookingGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingGuideView.swift; sourceTree = "<group>"; };
+		ABB15AA1281F62BA00A7AB3F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ABB15AA3281FAEBF00A7AB3F /* StartCookingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCookingButton.swift; sourceTree = "<group>"; };
+		ABB15AA5281FBE8100A7AB3F /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +79,13 @@
 		AB9D6E00281A8E14007D1535 /* PASTArt */ = {
 			isa = PBXGroup;
 			children = (
+				ABB15AA0281F62A600A7AB3F /* Extensions */,
+				ABB15A9F281F628F00A7AB3F /* Constants */,
 				AB9D6E01281A8E14007D1535 /* PASTArtApp.swift */,
 				AB9D6E13281BC71D007D1535 /* Model */,
 				AB9D6E15281CE198007D1535 /* State */,
 				AB9D6E14281CE15A007D1535 /* Views */,
+				ABB15A9C281EA23D00A7AB3F /* Cooking */,
 				AB9D6E05281A8E16007D1535 /* Assets.xcassets */,
 				AB9D6E07281A8E16007D1535 /* Preview Content */,
 			);
@@ -103,8 +112,7 @@
 		AB9D6E14281CE15A007D1535 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AB9D6E1E281CFB76007D1535 /* ContentView.swift */,
-				ABB15A9C281EA23D00A7AB3F /* Cooking */,
+				AB9D6E1E281CFB76007D1535 /* CookingConfigAndGuideView.swift */,
 				AB9D6E20281E584E007D1535 /* Preconfiguration */,
 			);
 			path = Views;
@@ -136,6 +144,7 @@
 				AB9D6E22281E5887007D1535 /* CookingAmountConfigButtonsView.swift */,
 				AB9D6E24281E5941007D1535 /* CookingNoodleConfigPickerView.swift */,
 				AB9D6E26281E5996007D1535 /* CookLevelConfigButtonsView.swift */,
+				ABB15AA3281FAEBF00A7AB3F /* StartCookingButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -146,6 +155,22 @@
 				ABB15A9D281EA26A00A7AB3F /* CookingGuideView.swift */,
 			);
 			path = Cooking;
+			sourceTree = "<group>";
+		};
+		ABB15A9F281F628F00A7AB3F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				ABB15AA1281F62BA00A7AB3F /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		ABB15AA0281F62A600A7AB3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABB15AA5281FBE8100A7AB3F /* Enum.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,14 +246,17 @@
 				AB9D6E04281A8E14007D1535 /* PreconfigurationView.swift in Sources */,
 				AB9D6E17281CF8A7007D1535 /* AppState.swift in Sources */,
 				AB9D6E27281E5996007D1535 /* CookLevelConfigButtonsView.swift in Sources */,
+				ABB15AA2281F62BA00A7AB3F /* Colors.swift in Sources */,
 				AB9D6E02281A8E14007D1535 /* PASTArtApp.swift in Sources */,
 				AB9D6E10281A90DD007D1535 /* Recipes.swift in Sources */,
 				AB9D6E12281AB6B7007D1535 /* PastaDetailInfo.swift in Sources */,
-				AB9D6E1F281CFB76007D1535 /* ContentView.swift in Sources */,
+				AB9D6E1F281CFB76007D1535 /* CookingConfigAndGuideView.swift in Sources */,
 				AB9D6E19281CF8D9007D1535 /* AppActions.swift in Sources */,
 				ABB15A9E281EA26A00A7AB3F /* CookingGuideView.swift in Sources */,
+				ABB15AA6281FBE8100A7AB3F /* Enum.swift in Sources */,
 				AB9D6E1B281CF902007D1535 /* Reducers.swift in Sources */,
 				AB9D6E25281E5941007D1535 /* CookingNoodleConfigPickerView.swift in Sources */,
+				ABB15AA4281FAEBF00A7AB3F /* StartCookingButton.swift in Sources */,
 				AB9D6E1D281CF988007D1535 /* AppStore.swift in Sources */,
 				AB9D6E23281E5887007D1535 /* CookingAmountConfigButtonsView.swift in Sources */,
 			);

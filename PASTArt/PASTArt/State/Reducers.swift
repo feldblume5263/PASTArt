@@ -13,6 +13,7 @@ func appReducer(state: inout AppState, action: AppAction) -> Void {
     switch action {
     
     // MARK: - preconfiguration view
+        
     case .amountButtonPressed(let buttonIdx):
         state.amountButtonState.indices.forEach { state.amountButtonState[$0] = $0 == buttonIdx ? true : false }
     
@@ -21,5 +22,13 @@ func appReducer(state: inout AppState, action: AppAction) -> Void {
         
     case .goToCookingStage:
         state.currentStage = .cookingPasta
+        
+    case .setNumberOfPeople(let amount):
+        state.config.numberOfPeople = amount
+        
+    case .setConfigs(let amount, let noodleIndex, let cookLevelIndex):
+        state.config.numberOfPeople = amount
+        state.config.typeOfNoodle = Noodle.allCases[noodleIndex]
+        state.config.cookingLevel = CookLevel.allCases[cookLevelIndex]
     }
 }

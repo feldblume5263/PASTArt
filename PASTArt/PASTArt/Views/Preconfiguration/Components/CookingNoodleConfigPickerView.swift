@@ -9,8 +9,7 @@ import SwiftUI
 
 struct CookingNoodleConfigPickerView: View {
     @EnvironmentObject var store: AppStore
-    let noodleName = ["탈리아텔레", "링귀네", "스파게티니", "스파게티", "부카토니", "파르팔레", "카펠레티"]
-    @State private var selectedNoodle = 3
+    let noodleName = Noodle.allCases
     
     var body: some View {
         VStack {
@@ -18,12 +17,11 @@ struct CookingNoodleConfigPickerView: View {
                 Text("어떤 면으로 요리하실 건가요?").foregroundColor(.gray)
                 Spacer()
             }
-            
             VStack {
                 HStack {
-                    Picker(selection: $selectedNoodle, label: Text("Please choose a color")) {
+                    Picker(selection: $store.state.selectedNoodle, label: Text("Please choose a color")) {
                         ForEach(0 ..< noodleName.count, id: \.self) {
-                            Text(self.noodleName[$0])
+                            Text(self.noodleName[$0].rawValue)
                         }
                     }.pickerStyle(.wheel)
                     Spacer()

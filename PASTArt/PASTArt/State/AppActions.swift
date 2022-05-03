@@ -13,4 +13,6 @@ enum AppAction {
     case amountButtonPressed(Int)
     case cookLevelButtonPressed(Int)
     case goToCookingStage
+    case setNumberOfPeople(Int)
+    case setConfigs(Int, Int, Int)
 }

@@ -11,7 +11,7 @@ typealias AppStore = Store<AppState, AppAction>
 
 final class Store<State, Action>: ObservableObject {
     
-    @Published private(set) var state: State
+    @Published var state: State
     
     private let reducer: Reducer<State, Action>
     
