@@ -8,10 +8,11 @@
 import Foundation
 
 typealias AppStore = Store<AppState, AppAction>
+typealias TimerStore = Store<TimerState, TimerAction>
 
 final class Store<State, Action>: ObservableObject {
     
-    @Published var state: State
+    @Published private(set) var state: State
     
     private let reducer: Reducer<State, Action>
     

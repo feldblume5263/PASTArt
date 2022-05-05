@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PreconfigurationView: View {
     @EnvironmentObject var store: AppStore
+    @State private var pickerIndex: Int = Int(Noodle.allCases.count / 2)
     
     var body: some View {
         GeometryReader { geometry in
@@ -17,21 +18,21 @@ struct PreconfigurationView: View {
                 Spacer()
                 CookingAmountConfigButtonsView(geometry: geometry)
                 Spacer()
-                CookingNoodleConfigPickerView()
+                CookingNoodleConfigPickerView(tempForpicker: $pickerIndex)
                 Spacer()
                 CookLevelConfigButtonsView(geometry: geometry)
                 Spacer()
-                StartCookingButton(geometry: geometry)
+                StartCookingButton(selectedNoodle: pickerIndex, geometry: geometry)
             }
         }
     }
 }
 
-//struct PreconfigurationView_Previews: PreviewProvider {
-//    
-//    static var previews: some View {
-//        let store = AppStore(initialState: .init(), reducer: appReducer)
-//        PreconfigurationView()
-//            .environmentObject(store)
-//    }
-//}
+struct PreconfigurationView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        let store = AppStore(initialState: .init(), reducer: appReducer)
+        PreconfigurationView()
+            .environmentObject(store)
+    }
+}

@@ -15,4 +15,18 @@ enum AppAction {
     case goToCookingStage
     case setNumberOfPeople(Int)
     case setConfigs(Int, Int, Int)
+    
+    
+    // MARK: - CookingGuide View
+    case updateScreenDrag(Float)
+    case turnPageForward
+    case turnPageBackward
+    // MARK: - About Timer
+    case setTimer(Int, String, TimeInterval)
+    case countTime(Int)
+}
+
+enum TimerAction {
+    case setTimer(Int, String, TimeInterval)
+    case countTime(Int)
 }

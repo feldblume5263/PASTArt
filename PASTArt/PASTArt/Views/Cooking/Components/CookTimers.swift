@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CookTimers: View {
     @EnvironmentObject var store: AppStore
+    private let timePublisher = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
     let geometry: GeometryProxy
     
     var body: some View {
         HStack {
-            ForEach(0 ..< 3, id: \.self) { idx in
+            ForEach(store.state.timers, id: \.self.id) { timer in
                 Spacer()
                 VStack {
-                    Text(store.state.timers[idx].timerTitle ?? "")
-                    CookTimer(geometry: geometry, _timerIndex: idx)
+                    Text(timer.title ?? " ").lineLimit(1).font(.caption.bold()).frame(width: geometry.size.width * 0.25)
+                    CookTimer(timePublisher: timePublisher, geometry: geometry, timer: timer)
                 }
                 Spacer()
             }
@@ -27,15 +29,10 @@ struct CookTimers: View {
 
 struct CookTimer: View {
     @EnvironmentObject var store: AppStore
+    let timePublisher: Publishers.Autoconnect<Timer.TimerPublisher>
     
     let geometry: GeometryProxy
-    var _timerIndex: Int
-    var timerIndex: Int {
-        get { if _timerIndex >= 0 && _timerIndex < store.state.timers.count
-            { return _timerIndex }
-            return 0 }
-        set { _timerIndex = newValue }
-    }
+    let timer: TimerConfig
     let lineWidth: CGFloat = 10
     
     var body: some View {
@@ -45,14 +42,18 @@ struct CookTimer: View {
                 .opacity(0.3)
                 .foregroundColor(.gray)
             Circle()
-                .trim(from: 0.0, to: CGFloat(min(Float(store.state.timers[timerIndex].timerProgressValue) / Float(100), 1.0)))
+                .trim(from: 0.0, to: CGFloat(min(Float(timer.currentCount) / Float(timer.duration), 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                 .foregroundColor(.red)
                 .rotationEffect(Angle(degrees: -90))
-                .animation(.linear, value: store.state.timers[timerIndex].timerProgressValue)
+                .animation(.linear, value: timer.currentCount)
         }
         .frame(width: geometry.size.width * 0.2, height: geometry.size.width * 0.2)
-        .padding()
+        .onReceive(timePublisher) { _ in
+            if store.state.timers[timer.id].isOccupied {
+                store.dispatch(.countTime(timer.id))
+            }
+        }
         
     }
 }

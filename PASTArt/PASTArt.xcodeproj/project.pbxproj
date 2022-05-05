@@ -28,6 +28,9 @@
 		ABB15AAA2821171E00A7AB3F /* CookTimers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AA92821171E00A7AB3F /* CookTimers.swift */; };
 		ABB15AAC282141FD00A7AB3F /* CookingGuideCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AAB282141FD00A7AB3F /* CookingGuideCarousel.swift */; };
 		ABB15AAE28214F9F00A7AB3F /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AAD28214F9F00A7AB3F /* Recipes.swift */; };
+		ABB15AB12821558800A7AB3F /* CookingGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB02821558800A7AB3F /* CookingGuideCard.swift */; };
+		ABB15AB328215D8A00A7AB3F /* fryingOnion.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */; };
+		ABB15AB628224C0C00A7AB3F /* TimerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB528224C0C00A7AB3F /* TimerConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		ABB15AA92821171E00A7AB3F /* CookTimers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimers.swift; sourceTree = "<group>"; };
 		ABB15AAB282141FD00A7AB3F /* CookingGuideCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingGuideCarousel.swift; sourceTree = "<group>"; };
 		ABB15AAD28214F9F00A7AB3F /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		ABB15AB02821558800A7AB3F /* CookingGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingGuideCard.swift; sourceTree = "<group>"; };
+		ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fryingOnion.mp4; sourceTree = "<group>"; };
+		ABB15AB528224C0C00A7AB3F /* TimerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 			children = (
 				AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */,
 				AB9D6E0F281A90DD007D1535 /* RecipeCard.swift */,
+				ABB15AB528224C0C00A7AB3F /* TimerConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,8 +190,9 @@
 		ABB15AA82821170500A7AB3F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				ABB15AAB282141FD00A7AB3F /* CookingGuideCarousel.swift */,
 				ABB15AA92821171E00A7AB3F /* CookTimers.swift */,
+				ABB15AAB282141FD00A7AB3F /* CookingGuideCarousel.swift */,
+				ABB15AB02821558800A7AB3F /* CookingGuideCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -192,10 +200,19 @@
 		ABB15AAF28214FF100A7AB3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ABB15AB428215E0C00A7AB3F /* vedios */,
 				AB9D6E05281A8E16007D1535 /* Assets.xcassets */,
 				ABB15AAD28214F9F00A7AB3F /* Recipes.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		ABB15AB428215E0C00A7AB3F /* vedios */ = {
+			isa = PBXGroup;
+			children = (
+				ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */,
+			);
+			path = vedios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB15AB328215D8A00A7AB3F /* fryingOnion.mp4 in Resources */,
 				AB9D6E09281A8E16007D1535 /* Preview Assets.xcassets in Resources */,
 				AB9D6E06281A8E16007D1535 /* Assets.xcassets in Resources */,
 			);
@@ -275,6 +293,7 @@
 				AB9D6E02281A8E14007D1535 /* PASTArtApp.swift in Sources */,
 				AB9D6E10281A90DD007D1535 /* RecipeCard.swift in Sources */,
 				AB9D6E12281AB6B7007D1535 /* PastaDetailInfo.swift in Sources */,
+				ABB15AB628224C0C00A7AB3F /* TimerConfig.swift in Sources */,
 				ABB15AAC282141FD00A7AB3F /* CookingGuideCarousel.swift in Sources */,
 				AB9D6E1F281CFB76007D1535 /* CookingConfigAndGuideView.swift in Sources */,
 				AB9D6E19281CF8D9007D1535 /* AppActions.swift in Sources */,
@@ -287,6 +306,7 @@
 				ABB15AA4281FAEBF00A7AB3F /* StartCookingButton.swift in Sources */,
 				AB9D6E1D281CF988007D1535 /* AppStore.swift in Sources */,
 				AB9D6E23281E5887007D1535 /* CookingAmountConfigButtonsView.swift in Sources */,
+				ABB15AB12821558800A7AB3F /* CookingGuideCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

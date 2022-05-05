@@ -1,5 +1,5 @@
 //
-//  CookingGuideCards.swift
+//  CookingGuideCarousel.swift
 //  PASTArt
 //
 //  Created by Noah Park on 2022/05/03.
@@ -22,30 +22,17 @@ struct CookingGuideCarousel: View {
     var body: some View {
         Carousel(numberOfItems: CGFloat(RecipeCards.count), spacing: spacing, widthOfHiddenCards: widthOfHiddenCards) {
             ForEach(RecipeCards, id: \.self.id) { step in
-                ZStack {
-                    RoundedRectangle(cornerRadius: 30)
-                        .foregroundColor(.white)
-                        .shadow(color: Color.gray, radius: 5, x: 1, y: 1)
-                    Text("\(step.stepName)")
-                        .foregroundColor(.black)
-                }
-                .frame(width: UIScreen.main.bounds.width - (widthOfHiddenCards * 2) - (spacing * 2),
-                       height: step.id == store.state.activeCard ? cardHeight : cardHeight - 60,
-                       alignment: .center)
-                .transition(AnyTransition.slide)
-                .animation(.spring(), value: store.state.activeCard)
-            }
-            
+                CookingGuideCard(step: step, geometry: geometry, isFinalCard: step.id == RecipeCards.count - 1 ? true : false)
+                    .frame(width: UIScreen.main.bounds.width - (widthOfHiddenCards * 2) - (spacing * 2),
+                           height: step.id == store.state.activeCard ? cardHeight : cardHeight - 60,
+                           alignment: .center)
+                    .transition(AnyTransition.slide)
+                    .animation(.spring(), value: store.state.activeCard)
+            }   
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
         .background(Color.white.edgesIgnoringSafeArea(.all))
     }
-}
-
-
-struct Card: Decodable, Hashable, Identifiable {
-    var id: Int
-    var name: String = ""
 }
 
 struct Carousel<Items: View>: View {
@@ -83,39 +70,37 @@ struct Carousel<Items: View>: View {
         if (calcOffset != Float(nextOffset)) { calcOffset = Float(activeOffset) + store.state.screenDrag }
         
         return HStack(alignment: .center, spacing: spacing) { items }
-        .offset(x: CGFloat(calcOffset), y: 0)
-        .gesture(DragGesture().updating($isDetectingLongPress) { currentState, gestureState, transaction in
-            self.store.state.screenDrag = Float(currentState.translation.width)
-        }.onEnded { value in
-            self.store.state.screenDrag = 0
-            
-            // 왼쪽으로 드래그한 값이 50이 안될 때
-            if (value.translation.width < -50) {
-                self.store.state.activeCard = self.store.state.activeCard + 1
-                if self.store.state.activeCard <= Int(numberOfItems) - 1 {
-                    let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                    impactMed.impactOccurred()
-                } else {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        self.store.state.activeCard = self.store.state.activeCard - 1
-                    }
-                }
-            }
-            
-            // 오른쪽으로 드래그한 값이 50이 안될 때
-            if (value.translation.width > 50) {
-                self.store.state.activeCard = self.store.state.activeCard - 1
-                if self.store.state.activeCard >= 0 {
-                    let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                    impactMed.impactOccurred()
-                } else {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        self.store.state.activeCard = self.store.state.activeCard + 1
+            .offset(x: CGFloat(calcOffset), y: 0)
+            .gesture(DragGesture().updating($isDetectingLongPress) { currentState, gestureState, transaction in
+                self.store.dispatch(.updateScreenDrag(Float(currentState.translation.width)))
+            }.onEnded { value in
+                self.store.dispatch(.updateScreenDrag(0))
+                
+                if (value.translation.width < -50) {
+                    store.dispatch(.turnPageForward)
+                    if self.store.state.activeCard <= Int(numberOfItems) - 1 {
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
+                    } else { // 왼쪽으로 드래그한 값이 50이 안될 때
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            store.dispatch(.turnPageBackward)
+                        }
                     }
                 }
                 
-            }
-        })
+                if (value.translation.width > 50) {
+                    store.dispatch(.turnPageBackward)
+                    if self.store.state.activeCard >= 0 {
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
+                    } else { // 오른쪽으로 드래그한 값이 50이 안될 때
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            store.dispatch(.turnPageForward)
+                        }
+                    }
+                    
+                }
+            })
     }
 }
 

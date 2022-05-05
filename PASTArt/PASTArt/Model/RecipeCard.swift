@@ -8,14 +8,28 @@
 import Foundation
 
 typealias CookTimeInterval = TimeInterval
+typealias TimerId = Int
 
-struct RecipeCard: Identifiable {
+class RecipeCard: Identifiable {
     let id: Int
     let stepName: String
     let description: String
     var duration: TimeInterval?
     let videoName: String?
     let isNoodle: Bool
+    var timerOccupy: TimerId? = nil
+    var isCounting: Bool = false
+    
+    init(id: Int, stepName: String, description: String, duration: TimeInterval?, videoName: String?, isNoodle: Bool) {
+        self.id = id
+        self.stepName = stepName
+        self.description = description
+        self.duration = duration
+        self.videoName = videoName
+        self.isNoodle = isNoodle
+        self.timerOccupy = nil
+        self.isCounting = false
+    }
     
     
     static func getRecipesOfPasta(pasta: Pasta) -> [RecipeCard] {
@@ -27,6 +41,15 @@ struct RecipeCard: Identifiable {
         case .alioOilo:
             return pomodoroRecipes
         }
+    }
+    
+    func isOccupied(by timerIndex: Int) {
+        timerOccupy = timerIndex
+        isCounting = true
+    }
+
+    func isRemoved() {
+        timerOccupy = nil
     }
 }
 

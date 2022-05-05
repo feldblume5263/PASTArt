@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CookingNoodleConfigPickerView: View {
     @EnvironmentObject var store: AppStore
+    @Binding var tempForpicker: Int
+    
     let noodleName = Noodle.allCases
     
     var body: some View {
@@ -19,7 +21,7 @@ struct CookingNoodleConfigPickerView: View {
             }
             VStack {
                 HStack {
-                    Picker(selection: $store.state.selectedNoodle, label: Text("Please choose a color")) {
+                    Picker(selection: $tempForpicker, label: Text("Please choose a color")) {
                         ForEach(0 ..< noodleName.count, id: \.self) {
                             Text(self.noodleName[$0].rawValue)
                         }
@@ -36,7 +38,7 @@ struct CookingNoodleConfigPickerView_Previews: PreviewProvider {
     static var previews: some View {
         let store = AppStore(initialState: .init(), reducer: appReducer)
         
-        CookingNoodleConfigPickerView()
+        CookingNoodleConfigPickerView(tempForpicker: Binding.constant(3))
             .environmentObject(store)
     }
 }

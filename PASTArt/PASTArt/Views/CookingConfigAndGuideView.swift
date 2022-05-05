@@ -20,6 +20,7 @@ struct CookingConfigAndGuideView: View {
                     .environmentObject(store)
             default:
                 CookingGuideView(typeOfPasta: typeOfPasta)
+                    .environmentObject(store)
             }
         }
     }

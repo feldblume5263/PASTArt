@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StartCookingButton: View {
     @EnvironmentObject var store: AppStore
+    let selectedNoodle: Int
     let geometry: GeometryProxy
     
     var body: some View {
@@ -16,7 +17,7 @@ struct StartCookingButton: View {
             store.dispatch(.setNumberOfPeople((store.state.amountButtonState.firstIndex(of: true) ?? 0) + 1))
             store.dispatch(.setConfigs(
                 (store.state.amountButtonState.firstIndex(of: true) ?? 0) + 1,
-                store.state.selectedNoodle,
+                selectedNoodle,
                 store.state.cookLevelButtonState.firstIndex(of: true) ?? 0))
             store.dispatch(.goToCookingStage)
         } label: {
@@ -37,7 +38,7 @@ struct StartCookingButton: View {
 struct StartCookingButton_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometry in
-            StartCookingButton(geometry: geometry)
+            StartCookingButton(selectedNoodle: 3, geometry: geometry)
         }
     }
 }
