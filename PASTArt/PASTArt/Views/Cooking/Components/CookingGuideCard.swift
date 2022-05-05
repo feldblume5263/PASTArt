@@ -17,6 +17,7 @@ struct CookingGuideCard: View {
     let isFinalCard: Bool
     let RecipeCards: [RecipeCard]
     let pastaInfo: PastaInfo?
+    @State var showingAlert: Bool = false
     
     init(step: RecipeCard, geometry: GeometryProxy, isFinalCard: Bool, RecipeCards: [RecipeCard], pastaInfo: PastaInfo) {
         self.step = step
@@ -54,7 +55,7 @@ struct CookingGuideCard: View {
                                     Text(String(format: "%.0f", info.ingredient[idx].amount * Double(store.state.config.numberOfPeople ?? 1)))
                                     Text(info.ingredient[idx].scale)
                                 }
-                                .font(.title3).foregroundColor(.gray)
+                                .font(.caption).foregroundColor(.gray)
                                 .padding(.vertical, 3)
                                 .padding(.horizontal)
                             }
@@ -122,6 +123,7 @@ struct CookingGuideCard: View {
                                     }
                                 }
                                 // TODO: - 타이머에 남은 자리가 없다는 알람
+                                showingAlert = true
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 15)
@@ -130,6 +132,8 @@ struct CookingGuideCard: View {
                                         .aspectRatio(CGSize(width: 3, height: 1), contentMode: .fit)
                                     Text("타이머 시작").font(.body.bold()).foregroundColor(.black)
                                 }
+                            }.alert(isPresented: $showingAlert) {
+                                Alert(title: Text("남은 타이머 없음"), message: Text("타이머는 3개까지 가능합니다.\n기존 타이머를 정지하세요."), dismissButton: .default(Text("완료")))
                             }
                         }
                     }

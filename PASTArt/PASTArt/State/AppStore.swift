@@ -27,9 +27,8 @@ final class Store<State, Action>: ObservableObject {
     static func getTimeString(count: TimeInterval, duration: TimeInterval, addSymbol: Bool) -> String {
         var ret: String = ""
         if addSymbol {
-            if count < duration {
+            if count <= duration + 1 {
                 if duration - count < 1 { return " " }
-                ret += "-"
             } else {
                 ret += "+"
             }

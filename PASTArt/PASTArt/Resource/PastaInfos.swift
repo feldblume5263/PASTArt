@@ -35,12 +35,16 @@ let pastaInfos: [PastaInfo] = [
               ]),
     PastaInfo(pasta: .alfredo, name: "Alfredo", time: "23min", picture: "alfredo",
               ingredient: [
-                Ingredient(name: "생크림", amount: 200, scale: "ml"),
-                Ingredient(name: "우유", amount: 200, scale: "ml"),
+                Ingredient(name: "생크림", amount: 130, scale: "ml"),
+                Ingredient(name: "닭육수", amount: 130, scale: "ml"),
+                Ingredient(name: "베이컨", amount: 1, scale: "줄"),
                 Ingredient(name: "양파", amount: 1, scale: "개"),
                 Ingredient(name: "마늘", amount: 2, scale: "개"),
+                Ingredient(name: "양송이", amount: 3, scale: "개"),
+                Ingredient(name: "브로콜리", amount: 2, scale: "개"),
                 Ingredient(name: "파스타면", amount: 300, scale: "g"),
                 Ingredient(name: "파슬리", amount: 1, scale: "줄기")
+                
               ]),
     PastaInfo(pasta: .alioOilo, name: "Alio e Olio", time: "20min", picture: "alioeolio",
               ingredient: [

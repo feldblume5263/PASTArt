@@ -34,6 +34,15 @@
 		ABB15AB82824365400A7AB3F /* PastaLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB72824365300A7AB3F /* PastaLibraryView.swift */; };
 		ABB15ABA2824385800A7AB3F /* PastaInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB92824385800A7AB3F /* PastaInfos.swift */; };
 		ABB15ABD282469CC00A7AB3F /* PastaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15ABC282469CC00A7AB3F /* PastaDetailView.swift */; };
+		ABB15AC12824867800A7AB3F /* tomatoPlating.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15ABE2824867800A7AB3F /* tomatoPlating.mp4 */; };
+		ABB15AC22824867800A7AB3F /* tomato.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15ABF2824867800A7AB3F /* tomato.mp4 */; };
+		ABB15AC32824867800A7AB3F /* tomatoMix.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AC02824867800A7AB3F /* tomatoMix.mp4 */; };
+		ABB15AC52824874A00A7AB3F /* tomatoNoodle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AC42824874900A7AB3F /* tomatoNoodle.mp4 */; };
+		ABB15ACB28248A1E00A7AB3F /* alfredoCream.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AC628248A1E00A7AB3F /* alfredoCream.mp4 */; };
+		ABB15ACC28248A1E00A7AB3F /* alfredoMix.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AC728248A1E00A7AB3F /* alfredoMix.mp4 */; };
+		ABB15ACD28248A1E00A7AB3F /* alfredoFrying.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AC828248A1E00A7AB3F /* alfredoFrying.mp4 */; };
+		ABB15ACE28248A1E00A7AB3F /* alfredoPlating.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AC928248A1E00A7AB3F /* alfredoPlating.mp4 */; };
+		ABB15ACF28248A1E00A7AB3F /* alfredoNoodle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15ACA28248A1E00A7AB3F /* alfredoNoodle.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +74,15 @@
 		ABB15AB72824365300A7AB3F /* PastaLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaLibraryView.swift; sourceTree = "<group>"; };
 		ABB15AB92824385800A7AB3F /* PastaInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaInfos.swift; sourceTree = "<group>"; };
 		ABB15ABC282469CC00A7AB3F /* PastaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaDetailView.swift; sourceTree = "<group>"; };
+		ABB15ABE2824867800A7AB3F /* tomatoPlating.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tomatoPlating.mp4; sourceTree = "<group>"; };
+		ABB15ABF2824867800A7AB3F /* tomato.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tomato.mp4; sourceTree = "<group>"; };
+		ABB15AC02824867800A7AB3F /* tomatoMix.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tomatoMix.mp4; sourceTree = "<group>"; };
+		ABB15AC42824874900A7AB3F /* tomatoNoodle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tomatoNoodle.mp4; sourceTree = "<group>"; };
+		ABB15AC628248A1E00A7AB3F /* alfredoCream.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfredoCream.mp4; sourceTree = "<group>"; };
+		ABB15AC728248A1E00A7AB3F /* alfredoMix.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfredoMix.mp4; sourceTree = "<group>"; };
+		ABB15AC828248A1E00A7AB3F /* alfredoFrying.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfredoFrying.mp4; sourceTree = "<group>"; };
+		ABB15AC928248A1E00A7AB3F /* alfredoPlating.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfredoPlating.mp4; sourceTree = "<group>"; };
+		ABB15ACA28248A1E00A7AB3F /* alfredoNoodle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = alfredoNoodle.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +238,15 @@
 			isa = PBXGroup;
 			children = (
 				ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */,
+				ABB15ABF2824867800A7AB3F /* tomato.mp4 */,
+				ABB15AC02824867800A7AB3F /* tomatoMix.mp4 */,
+				ABB15ABE2824867800A7AB3F /* tomatoPlating.mp4 */,
+				ABB15AC42824874900A7AB3F /* tomatoNoodle.mp4 */,
+				ABB15AC628248A1E00A7AB3F /* alfredoCream.mp4 */,
+				ABB15AC828248A1E00A7AB3F /* alfredoFrying.mp4 */,
+				ABB15AC728248A1E00A7AB3F /* alfredoMix.mp4 */,
+				ABB15ACA28248A1E00A7AB3F /* alfredoNoodle.mp4 */,
+				ABB15AC928248A1E00A7AB3F /* alfredoPlating.mp4 */,
 			);
 			path = videos;
 			sourceTree = "<group>";
@@ -290,9 +317,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB15AC52824874A00A7AB3F /* tomatoNoodle.mp4 in Resources */,
+				ABB15AC22824867800A7AB3F /* tomato.mp4 in Resources */,
+				ABB15ACF28248A1E00A7AB3F /* alfredoNoodle.mp4 in Resources */,
+				ABB15ACD28248A1E00A7AB3F /* alfredoFrying.mp4 in Resources */,
+				ABB15ACE28248A1E00A7AB3F /* alfredoPlating.mp4 in Resources */,
+				ABB15ACC28248A1E00A7AB3F /* alfredoMix.mp4 in Resources */,
 				ABB15AB328215D8A00A7AB3F /* fryingOnion.mp4 in Resources */,
 				AB9D6E09281A8E16007D1535 /* Preview Assets.xcassets in Resources */,
+				ABB15ACB28248A1E00A7AB3F /* alfredoCream.mp4 in Resources */,
 				AB9D6E06281A8E16007D1535 /* Assets.xcassets in Resources */,
+				ABB15AC32824867800A7AB3F /* tomatoMix.mp4 in Resources */,
+				ABB15AC12824867800A7AB3F /* tomatoPlating.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

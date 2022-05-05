@@ -36,7 +36,7 @@ class RecipeCard: Identifiable {
         case .pomodoro:
             return pomodoroRecipes
         case .alfredo:
-            return pomodoroRecipes
+            return alfredoRecipes
         case .alioOilo:
             return pomodoroRecipes
         }
