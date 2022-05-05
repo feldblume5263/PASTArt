@@ -9,27 +9,58 @@ import SwiftUI
 
 struct CookingConfigAndGuideView: View {
     @EnvironmentObject var store: AppStore
-    // 파스타 타입을 시작 버튼을 누를 때 받아와야 함
-    var typeOfPasta: Pasta = .pomodoro
+    @Environment(\.presentationMode) var presentationMode
+    let pastaInfo: PastaInfo
+    var RecipeCards: [RecipeCard] {
+        RecipeCard.getRecipesOfPasta(pasta: typeOfPasta)
+    }
+    
+    var typeOfPasta: Pasta
     
     var body: some View {
-        Group {
-            switch store.state.currentStage {
-            case .settingConfig:
-                PreconfigurationView()
-                    .environmentObject(store)
-            default:
-                CookingGuideView(typeOfPasta: typeOfPasta)
-                    .environmentObject(store)
+        GeometryReader { geometry in
+            Group {
+                VStack {
+                    if store.state.currentStage != .showingDetail {
+                        HStack {
+                            Spacer()
+                            Button {
+                                store.dispatch(.initConfigAndTimer)
+                                RecipeCards.forEach { recipeCard in
+                                    recipeCard.isRemoved()
+                                }
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .resizable()
+                                    .foregroundColor(.gray)
+                                    .frame(width: 30, height: 30)
+                                    .opacity(0.8)
+                                    .padding(.horizontal)
+                                    .padding(.bottom, store.state.currentStage == .settingConfig ? -20 : 0)
+                            }
+                        }
+                    }
+                    switch store.state.currentStage {
+                    case .showingDetail:
+                        PastaDetailView(pastaInfo: pastaInfo, geometry: geometry)
+                    case .settingConfig:
+                        PreconfigurationView()
+                            .environmentObject(store)
+                    case .cookingPasta:
+                        CookingGuideView(typeOfPasta: pastaInfo.pasta, pastaInfo: pastaInfo, RecipeCards: RecipeCards)
+                            .environmentObject(store)
+                    }
+                }
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let store = AppStore(initialState: .init(), reducer: appReducer)
-        CookingConfigAndGuideView(typeOfPasta: .pomodoro)
-            .environmentObject(store)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let store = AppStore(initialState: .init(), reducer: appReducer)
+//        CookingConfigAndGuideView(typeOfPasta: .pomodoro)
+//            .environmentObject(store)
+//    }
+//}

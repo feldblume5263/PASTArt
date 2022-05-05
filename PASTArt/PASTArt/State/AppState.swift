@@ -7,15 +7,13 @@
 
 import Foundation
 
-struct TimerState {
-    var timers = [TimerConfig(id: 0), TimerConfig(id: 1), TimerConfig(id: 2)]
-}
-
 struct AppState {
     // MARK: - App Stage
     var currentStage: AppStage = .settingConfig
     
-    // MARK: - preconfiguration view
+    // MARK: - PastaLibrary View
+    
+    // MARK: - preconfiguration View
     var config = PastaCookingConfig()
     var amountButtonState: [Bool] = [true, false, false, false]
     var cookLevelButtonState: [Bool] = [false, true, false]
@@ -27,7 +25,6 @@ struct AppState {
 }
 
 enum AppStage {
-    case showingMenus
     case showingDetail
     case settingConfig
     case cookingPasta

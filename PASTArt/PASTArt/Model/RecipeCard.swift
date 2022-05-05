@@ -18,7 +18,6 @@ class RecipeCard: Identifiable {
     let videoName: String?
     let isNoodle: Bool
     var timerOccupy: TimerId? = nil
-    var isCounting: Bool = false
     
     init(id: Int, stepName: String, description: String, duration: TimeInterval?, videoName: String?, isNoodle: Bool) {
         self.id = id
@@ -27,8 +26,8 @@ class RecipeCard: Identifiable {
         self.duration = duration
         self.videoName = videoName
         self.isNoodle = isNoodle
+        // 어떤 타이머를 점유 중인지.
         self.timerOccupy = nil
-        self.isCounting = false
     }
     
     
@@ -45,7 +44,6 @@ class RecipeCard: Identifiable {
     
     func isOccupied(by timerIndex: Int) {
         timerOccupy = timerIndex
-        isCounting = true
     }
 
     func isRemoved() {

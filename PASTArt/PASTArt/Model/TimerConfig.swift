@@ -12,5 +12,6 @@ struct TimerConfig: Identifiable {
     var isOccupied: Bool = false
     var title: String?
     var currentCount: TimeInterval = 0
-    var duration: TimeInterval = 0
+    var duration: TimeInterval = 0.1
+    var isRunning: Bool = true
 }

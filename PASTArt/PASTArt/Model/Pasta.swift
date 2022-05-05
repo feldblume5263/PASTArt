@@ -12,11 +12,3 @@ enum Pasta: String {
     case alfredo
     case alioOilo
 }
-
-struct PastaDetailInfo {
-    let name: String
-    let imageName: String
-    let cookMinutes: Int
-    let ingredient: [String: [Any]]
-    let description: String
-}

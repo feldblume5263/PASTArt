@@ -13,8 +13,10 @@ struct PASTArtApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CookingConfigAndGuideView()
+            PastaLibraryView()
                 .environmentObject(store)
+//            CookingConfigAndGuideView()
+//                .environmentObject(store)
         }
     }
 }

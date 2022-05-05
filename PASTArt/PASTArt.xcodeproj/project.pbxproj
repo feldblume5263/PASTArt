@@ -12,7 +12,7 @@
 		AB9D6E06281A8E16007D1535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9D6E05281A8E16007D1535 /* Assets.xcassets */; };
 		AB9D6E09281A8E16007D1535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9D6E08281A8E16007D1535 /* Preview Assets.xcassets */; };
 		AB9D6E10281A90DD007D1535 /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E0F281A90DD007D1535 /* RecipeCard.swift */; };
-		AB9D6E12281AB6B7007D1535 /* PastaDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */; };
+		AB9D6E12281AB6B7007D1535 /* Pasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E11281AB6B7007D1535 /* Pasta.swift */; };
 		AB9D6E17281CF8A7007D1535 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E16281CF8A7007D1535 /* AppState.swift */; };
 		AB9D6E19281CF8D9007D1535 /* AppActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E18281CF8D9007D1535 /* AppActions.swift */; };
 		AB9D6E1B281CF902007D1535 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D6E1A281CF902007D1535 /* Reducers.swift */; };
@@ -31,6 +31,9 @@
 		ABB15AB12821558800A7AB3F /* CookingGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB02821558800A7AB3F /* CookingGuideCard.swift */; };
 		ABB15AB328215D8A00A7AB3F /* fryingOnion.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */; };
 		ABB15AB628224C0C00A7AB3F /* TimerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB528224C0C00A7AB3F /* TimerConfig.swift */; };
+		ABB15AB82824365400A7AB3F /* PastaLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB72824365300A7AB3F /* PastaLibraryView.swift */; };
+		ABB15ABA2824385800A7AB3F /* PastaInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15AB92824385800A7AB3F /* PastaInfos.swift */; };
+		ABB15ABD282469CC00A7AB3F /* PastaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB15ABC282469CC00A7AB3F /* PastaDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +43,7 @@
 		AB9D6E05281A8E16007D1535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB9D6E08281A8E16007D1535 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB9D6E0F281A90DD007D1535 /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
-		AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaDetailInfo.swift; sourceTree = "<group>"; };
+		AB9D6E11281AB6B7007D1535 /* Pasta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pasta.swift; sourceTree = "<group>"; };
 		AB9D6E16281CF8A7007D1535 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		AB9D6E18281CF8D9007D1535 /* AppActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppActions.swift; sourceTree = "<group>"; };
 		AB9D6E1A281CF902007D1535 /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		ABB15AB02821558800A7AB3F /* CookingGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingGuideCard.swift; sourceTree = "<group>"; };
 		ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fryingOnion.mp4; sourceTree = "<group>"; };
 		ABB15AB528224C0C00A7AB3F /* TimerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConfig.swift; sourceTree = "<group>"; };
+		ABB15AB72824365300A7AB3F /* PastaLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaLibraryView.swift; sourceTree = "<group>"; };
+		ABB15AB92824385800A7AB3F /* PastaInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaInfos.swift; sourceTree = "<group>"; };
+		ABB15ABC282469CC00A7AB3F /* PastaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +120,7 @@
 		AB9D6E13281BC71D007D1535 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB9D6E11281AB6B7007D1535 /* PastaDetailInfo.swift */,
+				AB9D6E11281AB6B7007D1535 /* Pasta.swift */,
 				AB9D6E0F281A90DD007D1535 /* RecipeCard.swift */,
 				ABB15AB528224C0C00A7AB3F /* TimerConfig.swift */,
 			);
@@ -124,7 +130,9 @@
 		AB9D6E14281CE15A007D1535 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ABB15AB72824365300A7AB3F /* PastaLibraryView.swift */,
 				AB9D6E1E281CFB76007D1535 /* CookingConfigAndGuideView.swift */,
+				ABB15ABB2824691F00A7AB3F /* PastaDetail */,
 				AB9D6E20281E584E007D1535 /* Preconfiguration */,
 				ABB15A9C281EA23D00A7AB3F /* Cooking */,
 			);
@@ -200,19 +208,28 @@
 		ABB15AAF28214FF100A7AB3F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				ABB15AB428215E0C00A7AB3F /* vedios */,
+				ABB15AB428215E0C00A7AB3F /* videos */,
 				AB9D6E05281A8E16007D1535 /* Assets.xcassets */,
 				ABB15AAD28214F9F00A7AB3F /* Recipes.swift */,
+				ABB15AB92824385800A7AB3F /* PastaInfos.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		ABB15AB428215E0C00A7AB3F /* vedios */ = {
+		ABB15AB428215E0C00A7AB3F /* videos */ = {
 			isa = PBXGroup;
 			children = (
 				ABB15AB228215D8A00A7AB3F /* fryingOnion.mp4 */,
 			);
-			path = vedios;
+			path = videos;
+			sourceTree = "<group>";
+		};
+		ABB15ABB2824691F00A7AB3F /* PastaDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ABB15ABC282469CC00A7AB3F /* PastaDetailView.swift */,
+			);
+			path = PastaDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +309,8 @@
 				ABB15AA2281F62BA00A7AB3F /* Colors.swift in Sources */,
 				AB9D6E02281A8E14007D1535 /* PASTArtApp.swift in Sources */,
 				AB9D6E10281A90DD007D1535 /* RecipeCard.swift in Sources */,
-				AB9D6E12281AB6B7007D1535 /* PastaDetailInfo.swift in Sources */,
+				AB9D6E12281AB6B7007D1535 /* Pasta.swift in Sources */,
+				ABB15ABD282469CC00A7AB3F /* PastaDetailView.swift in Sources */,
 				ABB15AB628224C0C00A7AB3F /* TimerConfig.swift in Sources */,
 				ABB15AAC282141FD00A7AB3F /* CookingGuideCarousel.swift in Sources */,
 				AB9D6E1F281CFB76007D1535 /* CookingConfigAndGuideView.swift in Sources */,
@@ -300,6 +318,8 @@
 				ABB15A9E281EA26A00A7AB3F /* CookingGuideView.swift in Sources */,
 				ABB15AAE28214F9F00A7AB3F /* Recipes.swift in Sources */,
 				ABB15AAA2821171E00A7AB3F /* CookTimers.swift in Sources */,
+				ABB15AB82824365400A7AB3F /* PastaLibraryView.swift in Sources */,
+				ABB15ABA2824385800A7AB3F /* PastaInfos.swift in Sources */,
 				ABB15AA6281FBE8100A7AB3F /* Enum.swift in Sources */,
 				AB9D6E1B281CF902007D1535 /* Reducers.swift in Sources */,
 				AB9D6E25281E5941007D1535 /* CookingNoodleConfigPickerView.swift in Sources */,

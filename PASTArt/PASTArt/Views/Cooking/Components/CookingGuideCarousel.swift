@@ -14,15 +14,14 @@ struct CookingGuideCarousel: View {
     let spacing: CGFloat = 15
     var widthOfHiddenCards: CGFloat { geometry.size.width * 0.035 }
     var cardHeight: CGFloat { geometry.size.height * 0.7 }
+    var pastaInfo: PastaInfo
     
-    var RecipeCards: [RecipeCard] {
-        RecipeCard.getRecipesOfPasta(pasta: typeOfPasta)
-    }
+    var RecipeCards: [RecipeCard]
     
     var body: some View {
         Carousel(numberOfItems: CGFloat(RecipeCards.count), spacing: spacing, widthOfHiddenCards: widthOfHiddenCards) {
             ForEach(RecipeCards, id: \.self.id) { step in
-                CookingGuideCard(step: step, geometry: geometry, isFinalCard: step.id == RecipeCards.count - 1 ? true : false)
+                CookingGuideCard(step: step, geometry: geometry, isFinalCard: step.id == RecipeCards.count - 1 ? true : false, RecipeCards: RecipeCards, pastaInfo: pastaInfo)
                     .frame(width: UIScreen.main.bounds.width - (widthOfHiddenCards * 2) - (spacing * 2),
                            height: step.id == store.state.activeCard ? cardHeight : cardHeight - 60,
                            alignment: .center)
@@ -105,12 +104,13 @@ struct Carousel<Items: View>: View {
 }
 
 
-struct CookingGuideCards_Previews: PreviewProvider {
-    static var previews: some View {
-        GeometryReader { geometry in
-            let store = AppStore(initialState: .init(), reducer: appReducer)
-            CookingGuideCarousel(typeOfPasta: .pomodoro, geometry: geometry)
-                .environmentObject(store)
-        }
-    }
-}
+//struct CookingGuideCards_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GeometryReader { geometry in
+//            let store = AppStore(initialState: .init(), reducer: appReducer)
+//            let RecipeCards: [RecipeCard] = RecipeCard.getRecipesOfPasta(pasta: .pomodoro)
+//            CookingGuideCarousel(typeOfPasta: .pomodoro, geometry: geometry, RecipeCards: RecipeCards)
+//                .environmentObject(store)
+//        }
+//    }
+//}
